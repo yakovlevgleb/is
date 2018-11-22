@@ -15,22 +15,28 @@ html {
 	width 100%;
 }
 
-.foo {
-	width 240px;
+h1, h2, h3, h4, p, a {
+	margin: 0;
+	padding: 0;
 }
 
-@media screen and (min-width: 768px) {
-  .foo {
-		width 576px;
-	}
+a {
+	text-decoration: none;
 }
 
-.bar {
-	width 160px;
+ul, li {
+	list-style: none;
 }
 
-@media screen and (min-width: 768px) {
-	.bar {
-		width 384px;
-	}
+body {
+	font-family: 'Proxima Nova';
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 30px;
+	color: $main-text;
+}
+
+.wrapper {
+	max-width: 1170px;
+	margin: 0 auto;
 }

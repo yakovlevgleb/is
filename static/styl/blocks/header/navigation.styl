@@ -1,0 +1,24 @@
+.navigation {
+	&__list {
+		display: flex;
+		flex-direction: row;
+		list-style: none;
+	}
+
+	&__item {
+		&.active {
+			& ^[0]__href {
+				background-color: $green;
+			}
+		}
+	}
+
+	&__href {
+		font-size: 14px;
+		line-height: 18px;
+		font-weight: 600;
+		letter-spacing: 1.12px;
+		color: $white;
+		text-transform: uppercase;
+	}
+}
