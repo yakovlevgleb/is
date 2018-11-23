@@ -4,7 +4,7 @@
 	font-weight: 600;
 	letter-spacing: 1.12px;
 	color: $white;
-	padding: 10px 29px;
+	padding: 6px 25px;
 	background-color: $trn;
 	transition: background .6s;
 	cursor: pointer;
@@ -25,6 +25,12 @@
 		background-color: $green;
 		-webkit-transition: all 600ms cubic-bezier(0.39, -0.03, 0.51, 1.07);
 		        transition: all 600ms cubic-bezier(0.39, -0.03, 0.51, 1.07);
+	}
+
+	&--yellow {
+		&:before {
+			background-color: $yellow;
+		}
 	}
 
 	&:hover {

@@ -15,7 +15,7 @@ html {
 	width 100%;
 }
 
-h1, h2, h3, h4, p, a {
+h1, h2, h3, h4, p, a, ul {
 	margin: 0;
 	padding: 0;
 }
@@ -39,4 +39,20 @@ body {
 .wrapper {
 	max-width: 1170px;
 	margin: 0 auto;
+}
+
+.index h2:not([class]) {
+	font-size: 60px;
+	line-height: 60px;
+	color: $title-color;
+	font-weight: 800;
+	margin-bottom: 50px;
+}
+
+.index h3:not([class]) {
+	font-size: 36px;
+	line-height: 36px;
+	color: $title-color;
+	font-weight: 800;
+	margin-bottom: 50px;
 }
