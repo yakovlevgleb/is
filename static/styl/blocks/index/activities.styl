@@ -1,7 +1,8 @@
 .activities {
 	padding-top: 35px;
 	padding-bottom: 35px;
-	background-color: $about-bg-color;
+	margin-bottom: 90px
+	background-color: $bg-color;
 
 	&__container {
 		display: flex;
@@ -23,6 +24,12 @@
 		display inline-block;
 		position: relative;
 		padding-left: 79px;
+
+		&:hover {
+			& ^[0]__text > * {
+				border-color: $about-pluses-text;
+			}
+		}
 	}
 
 	&__icon {
@@ -37,5 +44,11 @@
 		line-height: 30px;
 		font-weight: normal;
 		color: $main-text;
+
+		& > * {
+			display: inline;
+			border-bottom: 1px solid transparent;
+			transition: border-color .5s;
+		}
 	}
 }

@@ -1,0 +1,120 @@
+.projects {
+	margin-bottom: 90px;
+
+	&__title {
+		display: flex;
+		flex-direction: row;
+		margin-bottom: 50px;
+
+		h2:not([class]) {
+			margin-bottom: 0;
+			margin-right: 40px;
+		}
+	}
+
+	&__items {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	&__item {
+		width: calc(100% / 2 - 21px);
+		display: flex;
+		flex-direction: row;
+		align-self: flex-start;
+
+		&:nth-child(2) {
+			margin-top: 50px;
+		}
+
+		&:hover {
+			& ^[0]__img-cover {
+				&:before {
+					opacity: 1;
+				}
+			}
+			& ^[0]__maintitle {
+				span {
+					border-color: transparent;
+				}
+			}
+
+			& ^[0]__line {
+				width: 150px;
+			}
+		}
+	}
+
+	&__img-cover {
+		margin-right: 42px;
+		position: relative;
+		align-self: flex-start;
+		flex-shrink: 0;
+		width: 261px;
+		height: 450px;
+		overflow: hidden;
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			opacity: 0;
+			transition: opacity .5s;
+			background-color: rgba(0,0,0,.7);
+		}
+	}
+
+	&__right {
+		display: flex;
+		flex-direction: column;
+		padding-top: 30px;
+
+	}
+
+	&__year {
+		font-size: 48px;
+		line-height: 30px;
+		font-weight: 300;
+		color: $black;
+		margin-bottom: 30px;
+	}
+
+	&__text {
+		padding-bottom: 13px;
+		margin-top: auto;
+	}
+
+	&__line {
+		width: 0;
+		height: 3px;
+		background-color: $yellow;
+		transition: width .7s;
+		margin-left: -92px;
+		position: relative;
+		z-index: 1;
+	}
+
+	&__maintitle {
+		font-size: 20px;
+		line-height: 32px;
+		font-weight: 800;
+		color: $title-color;
+		margin-bottom: 10px;
+
+		span {
+			border-bottom: 1px solid $title-color-hover;
+			transition: border-color .5s;
+		}
+	}
+
+	&__overview {
+		font-size: 18px;
+		line-height: 39px;
+		color: $main-text;
+		font-weight: normal;
+	}
+}
