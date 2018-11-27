@@ -1,0 +1,44 @@
+mixin contact-us
+	section.contact-us
+		.wrapper
+			h2 Связаться с нами
+			.contact-us__container
+				form(action="").contact-us__form.js-validate
+					input(type="text", placeholder="Ваше имя", data-req="req").input
+					input(type="text", placeholder="Электронная почта", data-req="req", data-type="email").input
+					select.select.js-style(data-req="req", data-type="select", data-placeholder="Тема сообщения")
+						option(value="0")
+						option(value="2") Изыскание источников водоснабжения
+						option(value="3") Разработка проектов логистического обеспечения строительства
+						option(value="4") Разработка и утверждение проектов освоения лесов
+						option(value="4") Разработка и утверждение проектов освоения лесов
+						option(value="4") Разработка и утверждение проектов освоения лесов
+						option(value="4") Разработка и утверждение проектов освоения лесов
+						option(value="4") Разработка и утверждение проектов освоения лесов
+						option(value="4") Разработка и утверждение проектов освоения лесов
+						option(value="4") Разработка и утверждение проектов освоения лесов проектов освоения лесов проектов освоения лесов 
+					textarea(placeholder="Текст сообщения", data-req="req").textarea
+					.pseudocheckbox
+						input(type="checkbox", id="PERSONAL", data-req="req", data-type="checkbox").pseudocheckbox__checkbox
+						label(for="PERSONAL").pseudocheckbox__label Даю согласие на обработку&nbsp;
+							a(href="#") персональных данных
+					button(type="submit").btn.btn--yellow.contact-us__btn Отправить
+				.contact-us__info
+					.contact-us__info-elem 
+						.contact-us__info-title Наш адрес
+						.contact-us__info-text.contact-us__info-text--adress
+							p 129329, Москва, Игарский проезд, д.2, стр.1
+					.contact-us__info-elem
+						.contact-us__info-title Телефон
+						.contact-us__info-text.contact-us__info-text--tel
+							a(href="tel:+74991898916") +7 (499) 189-89-16
+							a(href="tel:+74991801172") +7 (499) 180-11-72
+							a(href="tel:+74991806316") +7 (499) 180-63-16
+							br
+							a(href="tel:+74991803379") +7 (499) 180-3379 (Факс)
+					.contact-us__info-elem
+						.contact-us__info-title E-mail
+						.contact-us__info-text.contact-us__info-text--email
+							a(href="mailto:ppp@isppp.ru") ppp@isppp.ru
+			h3 Схема проезда
+			.contact-us__map

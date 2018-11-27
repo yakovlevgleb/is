@@ -1,0 +1,79 @@
+.select {
+	line-height: 30px;
+	font-size: 18px;
+	border: none;
+	border-bottom: 2px solid $form-border;
+	color: $main-text;
+	box-shadow: none;
+	background-color: $trn;
+	outline-color: transparent;
+	font-family: 'Proxima Nova';
+	cursor: pointer;
+	position: relative;
+
+	&.warning {
+		border-color: $warning;
+	}
+
+	&.opened {
+		&:before {
+			transform: translateY(-50%) rotate(180deg);
+		}
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		right: 0;
+		top: 50%;
+		will-change: transform;
+		transition: transform .5s;
+		transform: translateY(-50%) rotate(0deg);
+		background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAANCAYAAACQN/8FAAABS2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDIgNzkuMTYwOTI0LCAyMDE3LzA3LzEzLTAxOjA2OjM5ICAgICAgICAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIi8+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJyIj8+nhxg7wAAAIRJREFUKJHd0LEJwlAUheEvcQIbUzqAErETxAGsJaWFIDiXYCeIM1jYSCLBDWwcQ5s8kPiygKf873+53JPk+UgkNSbfII1ZGLZBl/iTvxMTPDDtcBa4pXhjh5NWyZhjj204fcUaZ4wbNsMBK9S9LBuE7SfuOKKPZSNVsWcu2OCFAmUYfACZ0BKXmPSnLQAAAABJRU5ErkJggg==');
+		background-position: center;
+		background-repeat: no-repeat;
+		width: 10px;
+		height: 13px;
+	}
+
+
+	.jq-selectbox__dropdown {
+		background-color: $white;
+		max-height: 200px;
+		overflow: auto;
+		padding: 0 20px;
+		width: calc(100% + 17px)!important;
+		top: 60px!important;
+	  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.15);
+	}
+
+	.jq-selectbox__select-text {
+		padding-right: 20px;
+	}
+
+	.jq-selectbox__dropdown li {
+		padding: 15px 0;
+		border-bottom: 1px solid $title-color-hover;
+		font-size: 18px;
+		line-height: 30px;
+		font-weight: normal;
+    white-space: pre-wrap;
+		transition: color .5s;
+
+		&:last-child {
+			border-bottom: 0;
+		}
+
+		&:hover {
+			color: $green;
+		}
+	}
+
+	.jq-selectbox__dropdown ul {
+		overflow: visible;
+	}
+
+	.warning {
+		border-color: $warning;
+	}
+}

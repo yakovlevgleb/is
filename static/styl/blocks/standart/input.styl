@@ -1,0 +1,28 @@
+.input {
+	line-height: 30px;
+	font-size: 18px;
+	border: none;
+	border-bottom: 2px solid $form-border;
+	color: $main-text;
+	box-shadow: none;
+	background-color: $trn;
+	outline-color: transparent;
+	font-family: 'Proxima Nova';
+
+	::-webkit-input-placeholder {
+	  color: $title-color-hover;
+	}
+	::-moz-placeholder {
+	  color: $title-color-hover;
+	}
+	:-ms-input-placeholder {
+	  color: $title-color-hover;
+	}
+	:-moz-placeholder {
+	  color: $title-color-hover;
+	}
+
+	&.warning {
+		border-color: $warning;
+	}
+}

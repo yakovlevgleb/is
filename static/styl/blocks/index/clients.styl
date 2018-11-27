@@ -1,0 +1,59 @@
+.clients {
+	margin-bottom: 90px;
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: row;
+		position: relative;
+		padding-top: 45px;
+		padding-bottom: 45px;
+		margin-bottom: 40px;
+
+		&:hover {
+			& ^[0]__img {
+				opacity: 1;
+				filter: grayscale(0);
+			}
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: 100px;
+			top: 0;
+			height: 100%;
+			width: 464px;
+			background-color: $bg-color;
+			z-index: -1;
+		}
+	}
+
+	&__logo {
+		width: 261px;
+		margin-right: 42px;
+		flex-shrink: 0;
+		align-self: flex-start;
+	}
+
+	&__img {
+		opacity: .5;
+		filter: grayscale(100%);
+		transition: all .5s;
+	}
+
+	&__text {
+		font-size: 18px;
+		line-height: 30px;
+		color: $main-text;
+		font-weight: normal;
+	}
+}
