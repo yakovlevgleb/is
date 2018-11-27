@@ -126,4 +126,37 @@
 		}
 	}).init();
 
+	window.is.yaMap = ({
+		init: function() {
+			if ($('#map').length) {
+				ymaps.ready(function() {
+					var myMap = new ymaps.Map('map', {
+						center: [
+							55.857334, 37.647015
+						],
+						zoom: 15,
+						controls: ['zoomControl']
+					});
+
+					myMap.behaviors.disable('scrollZoom');
+
+					ymaps.route([
+							{ type: 'Старт', point: [55.855738, 37.654481] },
+					    { type: 'Конец', point: [55.858276, 37.640327] }
+					], {
+					    mapStateAutoApply: true,
+							routingMode: "pedestrian"
+					}).then(function (route) {
+					    route.getPaths().options.set({
+					        strokeColor: '83dc5b',
+					        opacity: 0.9
+					    });
+					    myMap.geoObjects.add(route);
+					});
+
+				});
+			}
+		}
+	}).init();
+
 });

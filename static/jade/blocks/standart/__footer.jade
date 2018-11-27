@@ -1,2 +1,30 @@
 mixin footer
 	footer#footer.footer&attributes(attributes)
+		.wrapper
+			.footer__top
+				.logo.footer__logo
+					a(href="#").logo__href
+						img(src="", alt="").logo__img
+				.footer__column
+					nav.footer__nav
+						ul.footer__nav-list
+							li.footer__nav-item
+								a(href="#") О компании
+							li.footer__nav-item
+								a(href="#") Услуги
+							li.footer__nav-item
+								a(href="#") Проекты
+							li.footer__nav-item
+								a(href="#") Партнеры
+							li.footer__nav-item
+								a(href="#") Контакты
+					.footer__phones
+						a(href="tel:+74991898916").footer__phones-link +7 (499) 189-89-16
+						a(href="tel:+74991801172").footer__phones-link +7 (499) 180-11-72
+			.footer__bottom
+				.footer__copyrights
+					p ООО «ППП Искусственные сооружения» © 2018
+				.developers
+					a(href="https://dextra.ru" target="_blank" class="developers__href")
+						span.developers__dextra DEXTRA
+						| Разработка сайта
