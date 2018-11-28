@@ -1,5 +1,5 @@
 .about {
-	padding-top: 115px;
+	padding-top: 107px;
 
 	&__list {
 		display: flex;
@@ -33,7 +33,7 @@
 
 	&__item-icon {
 		position: absolute;
-		left: 28px;
+		left: 31px;
 		top: 31px;
 	}
 
@@ -49,7 +49,7 @@
 		font-size: 18px;
 		line-height: 30px;
 		font-weight: normal;
-		margin-bottom: 70px;
+		margin-bottom: 65px;
 	}
 
 	&__text-container {
@@ -60,13 +60,17 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		margin-bottom: 30px;
+		margin-bottom: 11px;
 	}
 
 	&__column {
 		display: flex;
 		flex-direction: column;
-		width: calc(100% / 2 - 42px);
+		width: calc(100% / 2);
+
+		&:nth-child(1) {
+			padding-right: 42px;
+		}
 	}
 
 	&__text-more {
@@ -77,6 +81,7 @@
 		color: $about-pluses-text;
 		position: relative;
 		display inline-block
+		letter-spacing: 0;
 
 		&:after {
 			content: '';

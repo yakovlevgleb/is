@@ -1,28 +1,88 @@
-.navigation {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+.footer {
+	background-color: $foter-bg;
+  padding-top: 69px;
+  padding-bottom: 68px;
 
-	&__list {
+	&__top {
 		display: flex;
 		flex-direction: row;
-		list-style: none;
+		justify-content: space-between;
+		margin-bottom: 38px;
 	}
 
-	&__item {
-		&.active {
-			& ^[0]__href {
-				background-color: $green;
-			}
+	&__bottom {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	&__nav-list {
+		display: flex;
+		flex-direction: row;
+	}
+
+	&__column {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+	}
+
+	&__nav-item {
+		margin-right: 40px;
+
+		&:last-child {
+			margin-right: 0;
 		}
 
 		&--search {
-			margin-left: 10px;
-
 			.active {
 				opacity: .5;
 			}
 		}
+	}
+
+	&__nav {
+		margin-bottom: 30px;
+	}
+
+	&__nav-link {
+		font-size: 14px;
+		line-height: 18px;
+		font-weight: 600;
+		color: $white;
+		text-transform: uppercase;
+		border-bottom: 1px solid rgba(255,255,255,0.4);
+		transition: .5s border-color;
+    letter-spacing: 1.12px;
+
+		&:hover {
+			border-color: $trn;
+		}
+	}
+
+	&__phones {
+		display: flex;
+		flex-direction: row;
+	}
+
+	&__phones-link {
+		font-size: 14px;
+		line-height: 18px;
+		color: $white;
+		font-weight: 600;
+		margin-right: 40px;
+		letter-spacing: 1.12px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__copyrights {
+		font-size: 18px;
+		line-height: 1;
+		font-weight: normal;
+		color: $white;
 	}
 
 	.search-btn {
@@ -37,12 +97,4 @@
 		cursor: pointer;
 	}
 
-	&__href {
-		font-size: 14px;
-		line-height: 18px;
-		font-weight: 600;
-		letter-spacing: 1.12px;
-		color: $white;
-		text-transform: uppercase;
-	}
 }

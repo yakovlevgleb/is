@@ -65,9 +65,9 @@
 				slidesPerView: 'auto',
 				spaceBetween: 80,
 				loop: true,
-				mousewheel: {
-					releaseOnEdges: true
-				},
+				// mousewheel: {
+				// 	releaseOnEdges: true
+				// },
 			});
 
 			$('body').on('click', '.js-slide-prev', function() {
@@ -156,6 +156,15 @@
 
 				});
 			}
+		}
+	}).init();
+
+	window.is.search = ({
+		init: function() {
+			$('.js-open-search').click(function() {
+				$(this).toggleClass('active');
+				$(this).closest('.navigation, .footer__column').find('.js-search-form').toggleClass('active')
+			});
 		}
 	}).init();
 
