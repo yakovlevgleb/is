@@ -62,12 +62,22 @@
 		init: function() {
 			var mySwiper = new Swiper('.swiper-container', {
 				speed: 1100,
-				slidesPerView: 'auto',
-				spaceBetween: 80,
+
 				loop: true,
 				// mousewheel: {
 				// 	releaseOnEdges: true
 				// },
+				breakpoints: {
+					0: {
+						slidesPerView: 1,
+						spaceBetween: 0,
+					},
+
+					1023: {
+						slidesPerView: 'auto',
+						spaceBetween: 80,
+					}
+				}
 			});
 
 			$('body').on('click', '.js-slide-prev', function() {

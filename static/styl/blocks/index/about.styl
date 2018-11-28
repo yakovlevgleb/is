@@ -97,5 +97,22 @@
 
 	&__img {
 		margin-bottom: 44px;
+		max-width: 100%;
+	}
+}
+
+@media only screen and (max-width: 1023px) {
+	.about {
+		&__list {
+			flex-direction: column;
+		}
+
+		&__item {
+			width: auto;
+
+			&:before {
+				width: 50%;
+			}
+		}
 	}
 }
