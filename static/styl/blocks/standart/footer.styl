@@ -103,6 +103,55 @@
 		&__top {
 			justify-content: flex-start;
 			flex-direction: column;
+			margin-bottom: 10px;
+
+			.logo {
+				align-self: flex-start;
+				margin-bottom: 30px;
+			}
 		}
+
+		&__nav {
+			margin-bottom: 10px;
+		}
+
+		&__nav-list {
+			flex-wrap: wrap;
+		}
+
+		&__nav-item {
+			margin-bottom: 20px;
+
+			&--search {
+				display: none;
+			}
+		}
+
+		&__copyrights {
+			margin-bottom: 30px;
+		}
+
+		&__bottom {
+			flex-direction: column;
+		}
+
+		&__phones-link {
+			margin-bottom: 20px;
+		}
+
+		&__phones {
+			flex-wrap: wrap;
+		}
+
+		.search {
+			display: none;
+		}
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.footer {
+		padding-top: 50px;
+		padding-bottom: 50px;
 	}
 }

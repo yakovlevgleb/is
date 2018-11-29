@@ -1,6 +1,28 @@
 ﻿$(document).ready(function() {
 	window.is = {};
 
+	window.is.obj = ({
+		init: function() {
+			if ($('.js-burger').length) {
+				 $('.js-burger').on('click', function() {
+						var _t = $(this),
+								nav = _t.siblings('.navigation'),
+								body = $('body');
+						if (!_t.hasClass('header__burger--active')) {
+							 _t.addClass('header__burger--active');
+							 body.addClass('open-menu');
+							 nav.fadeIn('350');
+						} else {
+							 _t.removeClass('header__burger--active');
+							 body.removeClass('open-menu');
+							 nav.fadeOut('350');
+						}
+						return false;
+				 });
+			}
+		}
+	}).init();
+
 	window.is.form = ({
 
 		init: function() {
@@ -172,7 +194,7 @@
 	window.is.search = ({
 		init: function() {
 			$('.js-open-search').click(function() {
-				$(this).toggleClass('active');
+				$(this).toggleClass('open');
 				$(this).closest('.navigation, .footer__column').find('.js-search-form').toggleClass('active')
 			});
 		}

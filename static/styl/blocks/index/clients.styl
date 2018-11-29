@@ -57,3 +57,23 @@
 		font-weight: normal;
 	}
 }
+
+@media only screen and (max-width: 767px) {
+	.clients {
+		margin-bottom: 50px;
+
+		&__item {
+			flex-direction: column;
+			padding-top: 0
+			padding-bottom: 0;
+
+			&:before {
+				content: none;
+			}
+		}
+
+		&__logo {
+			margin-bottom: 20px;
+		}
+	}
+}

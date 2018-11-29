@@ -43,3 +43,37 @@
 		}
 	}
 }
+
+
+@media only screen and (max-width: 767px) {
+	.reviews {
+		margin-bottom: 50px;
+
+		&__list {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		&__title {
+			flex-wrap: wrap;
+			flex-direction: column;
+
+			h2:not([class]) {
+				margin-right: 0;
+			}
+
+			.more {
+				align-self: flex-start;
+			}
+		}
+
+		&__item {
+			width: auto;
+			margin-bottom: 30px;
+
+			&:nth-child(2) {
+				margin-top: 0;
+			}
+		}
+	}
+}
