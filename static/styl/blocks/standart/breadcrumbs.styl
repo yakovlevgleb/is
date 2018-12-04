@@ -1,0 +1,34 @@
+.breadcrumbs {
+	margin-bottom: 14px;
+
+	.wrapper {
+		display: flex;
+		flex-direction: row;
+	}
+
+	&__href {
+		font-size: 15px;
+		line-height: 17px;
+		font-weight: normal;
+		color: $breadcrumbs;
+		border-bottom: 1px solid $breadcrumbs;
+		transition: border-color .5s;
+		margin-right: 10px;
+
+		&:hover {
+			border-color: transparent;
+		}
+
+		&:last-child {
+			border-color: transparent;
+		}
+	}
+
+	&__separator {
+		font-size: 15px;
+		line-height: 17px;
+		font-weight: normal;
+		color: $breadcrumbs;
+		margin-right: 10px;
+	}
+}

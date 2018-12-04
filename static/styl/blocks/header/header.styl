@@ -1,8 +1,11 @@
 .header {
 	padding-top: 40px;
-	padding-bottom: 35px;
+	padding-bottom: 40px;
 	z-index: 1;
 	position: relative;
+   background-position: center;
+   background-repeat: no-repeat;
+   margin-bottom 80px;
 
 	.wrapper {
 		position: relative;
@@ -14,8 +17,8 @@
 	&__burger {
       display: none;
       position: absolute;
-      top: 9px;
-			right: 25px;
+      top: 18px;
+      right: 25px;
       width: 40px;
       height: 24px;
       outline: none;
@@ -104,6 +107,14 @@
 		z-index: 10;
 		&__burger {
 			display: block;
+		}
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.header {
+		&__burger {
+			top: 9px;
 		}
 	}
 }
