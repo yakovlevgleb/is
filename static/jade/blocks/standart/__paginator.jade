@@ -1,0 +1,21 @@
+mixin paginator
+	section.paginator
+		button(type="button" disabled).paginator__btn.paginator__btn--prev.paginator__btn--disabled
+
+		ul.paginator__list
+			li.paginator__item.paginator__item--current
+				a(href="#").paginator__href 1
+			li.paginator__item
+				a(href="#").paginator__href 2
+			li.paginator__item
+				a(href="#").paginator__href 3
+			li.paginator__item
+				a(href="#").paginator__href 4
+			li.paginator__item
+				a(href="#").paginator__href 5
+			li.paginator__item.paginator__item--dots
+				span.paginator__dots ...
+			li.paginator__item
+				a(href="#").paginator__href 99
+
+		button(type="button").paginator__btn.paginator__btn--next

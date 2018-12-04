@@ -1,0 +1,98 @@
+.paginator {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 80px;
+
+	&__list {
+		display: flex;
+		flex-direction: row;
+		margin: 0 30px;
+	}
+
+	&__btn {
+		background-color: transparent;
+		border: none;
+		width: 0;
+		background-image: url('../i/arrow-left.png');
+		width: 26px;
+		height: 17px;
+		background-position: center;
+		cursor: pointer;
+		outline-color: transparent;
+		align-self: center;
+		transition: opacity .5s;
+
+		&:hover {
+			opacity: .6;
+		}
+
+		&--next {
+			transform: rotate(-180deg);
+		}
+
+		&--disabled {
+			opacity: .6;
+			cursor: auto;
+		}
+	}
+
+	&__item {
+		width: 37px;
+		height: 37px;
+		margin-right: 8px;
+		border-radius: 50%;
+		position: relative;
+		text-align: center;
+		list-style: none;
+
+		&--dots {
+			margin: 0;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&--current {
+			background-color: $red;
+			a {
+				color: $white;
+				border-color: transparent;
+			}
+		}
+	}
+
+	&__dots {
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 42px;
+		color: $red;
+	}
+
+	&__href {
+		position: absolute;
+		z-index: 1;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		font-weight: 600;
+		font-size: 16px;
+		color: $red;
+		border-bottom: 1px solid rgba(242,36,64,0.25);
+		transition: border-color .5s;
+
+		&:hover {
+			border-color: transparent;
+		}
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.paginator {
+		margin-top: 55px;
+		&__list {
+	    margin: 0 15px;
+		}
+	}
+}

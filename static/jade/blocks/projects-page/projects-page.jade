@@ -1,0 +1,87 @@
+include ./../standart/__paginator
+
+mixin projects-page
+	section.projects
+		.wrapper
+			h1 Наши проекты
+			.projects__filter
+				form(action="")
+					select.select.js-style(data-req="req", data-type="select", data-placeholder="Год")
+						option(value="0")
+						option(value="2") 2019
+						option(value="3") 2009
+						option(value="4") 2002
+						option(value="4") 2002
+						option(value="4") 2002
+						option(value="4") 2002
+			.projects__items
+				a(href="#").projects__item
+					.projects__img-cover
+						img(src="./img/project.jpg", alt="").projects__img
+					.projects__right
+						span.projects__year 2009
+						.projects__line
+						.projects__text
+							h3.projects__maintitle
+								span Магистральный газопровод «Ухта-Торжок». Компрессорная станция Нюксеницкая
+							.projects__overview.js-projects-shave
+								p Краткое описание, содержащее три и более строки, анонсирующее детали проекта в более развернутой, краткое описание, содержащее три и более строки, анонсирующее детали проекта в более развернутой.
+				a(href="#").projects__item
+					.projects__img-cover
+						img(src="./img/project.jpg", alt="").projects__img
+					.projects__right
+						span.projects__year 2009
+						.projects__line
+						.projects__text
+							h3.projects__maintitle
+								span Магистральный газопровод «СРТО Торжок». Крановый узел
+							.projects__overview.js-projects-shave
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam labore esse in blanditiis rem dolorum sunt cupiditate porro fugit ad natus at veritatis enim, a atque quos minus, voluptates ab.
+			.projects__items
+				a(href="#").projects__item
+					.projects__img-cover
+						img(src="./img/project.jpg", alt="").projects__img
+					.projects__right
+						span.projects__year 2009
+						.projects__line
+						.projects__text
+							h3.projects__maintitle
+								span Магистральный газопровод «Ухта-Торжок». Компрессорная станция Нюксеницкая
+							.projects__overview.js-projects-shave
+								p Краткое описание, содержащее три и более строки, анонсирующее детали проекта в более развернутой, краткое описание, содержащее три и более строки, анонсирующее детали проекта в более развернутой.
+				a(href="#").projects__item
+					.projects__img-cover
+						img(src="./img/project.jpg", alt="").projects__img
+					.projects__right
+						span.projects__year 2009
+						.projects__line
+						.projects__text
+							h3.projects__maintitle
+								span Магистральный газопровод «СРТО Торжок». Крановый узел
+							.projects__overview.js-projects-shave
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam labore esse in blanditiis rem dolorum sunt cupiditate porro fugit ad natus at veritatis enim, a atque quos minus, voluptates ab.
+			.projects__items
+				a(href="#").projects__item
+					.projects__img-cover
+						img(src="./img/project.jpg", alt="").projects__img
+					.projects__right
+						span.projects__year 2009
+						.projects__line
+						.projects__text
+							h3.projects__maintitle
+								span Магистральный газопровод «Ухта-Торжок». Компрессорная станция Нюксеницкая
+							.projects__overview.js-projects-shave
+								p Краткое описание, содержащее три и более строки, анонсирующее детали проекта в более развернутой, краткое описание, содержащее три и более строки, анонсирующее детали проекта в более развернутой.
+				a(href="#").projects__item
+					.projects__img-cover
+						img(src="./img/project.jpg", alt="").projects__img
+					.projects__right
+						span.projects__year 2009
+						.projects__line
+						.projects__text
+							h3.projects__maintitle
+								span Магистральный газопровод «СРТО Торжок». Крановый узел
+							.projects__overview.js-projects-shave
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam labore esse in blanditiis rem dolorum sunt cupiditate porro fugit ad natus at veritatis enim, a atque quos minus, voluptates ab.
+			+paginator
+
