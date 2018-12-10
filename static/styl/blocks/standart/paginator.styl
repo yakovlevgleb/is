@@ -14,9 +14,9 @@
 		background-color: transparent;
 		border: none;
 		width: 0;
-		background-image: url('../i/arrow-left.png');
-		width: 26px;
-		height: 17px;
+		background-image: url('../i/pagination-right.png');
+		width: 36px;
+		height: 15px;
 		background-position: center;
 		cursor: pointer;
 		outline-color: transparent;
@@ -27,7 +27,7 @@
 			opacity: .6;
 		}
 
-		&--next {
+		&--prev {
 			transform: rotate(-180deg);
 		}
 
@@ -38,24 +38,20 @@
 	}
 
 	&__item {
-		width: 37px;
-		height: 37px;
+		width: 43px;
+		height: 43px;
 		margin-right: 8px;
 		border-radius: 50%;
 		position: relative;
 		text-align: center;
 		list-style: none;
 
-		&--dots {
-			margin: 0;
-		}
-
 		&:last-child {
 			margin-right: 0;
 		}
 
 		&--current {
-			background-color: $red;
+			background-color: $green;
 			a {
 				color: $white;
 				border-color: transparent;
@@ -65,7 +61,7 @@
 
 	&__dots {
 		font-weight: 600;
-		font-size: 16px;
+		font-size: 27px;
 		line-height: 42px;
 		color: $red;
 	}
@@ -77,9 +73,11 @@
 		top: 50%;
 		transform: translate(-50%, -50%);
 		font-weight: 600;
-		font-size: 16px;
-		color: $red;
-		border-bottom: 1px solid rgba(242,36,64,0.25);
+		font-size: 27px;
+		letter-spacing: 0.5px;
+		line-height: 1;
+		color: $pagination-color;
+		border-bottom: 1px solid $title-color-hover;
 		transition: border-color .5s;
 
 		&:hover {
@@ -91,8 +89,18 @@
 @media only screen and (max-width: 767px) {
 	.paginator {
 		margin-top: 55px;
+
+		&__href {
+			font-size: 19px;
+		}
+
+		&__item {
+			width: 30px;
+			height: 30px;
+		}
+
 		&__list {
-	    margin: 0 15px;
+	    margin: 0 9px;
 		}
 	}
 }

@@ -36,6 +36,11 @@ body {
 	color: $main-text;
 }
 
+.open-menu {
+	position: fixed;
+	overflow-y: hidden;
+}
+
 .wrapper {
 	max-width: 1170px;
 	margin: 0 auto;
@@ -95,6 +100,15 @@ h1:not([class]) {
 	.wrapper {
 		padding: 0 25px;
 	}
+
+	h1:not([class]) {
+		font-size: 34px;
+    line-height: 36px;
+		color: $title-color;
+		font-weight: 800;
+		margin-bottom: 10px;
+	}
+
 	.index h2:not([class]) {
 		font-size: 32px;
     line-height: 36px;

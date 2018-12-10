@@ -1945,6 +1945,10 @@ body {
   line-height: 30px;
   color: #636363;
 }
+.open-menu {
+  position: fixed;
+  overflow-y: hidden;
+}
 .wrapper {
   max-width: 1170px;
   margin: 0 auto;
@@ -2159,6 +2163,7 @@ h1:not([class]) {
   font-family: 'Proxima Nova';
   cursor: pointer;
   position: relative;
+  z-index: 1;
 }
 .select.warning {
   border-color: #e20;
@@ -2709,9 +2714,9 @@ h1:not([class]) {
   background-color: transparent;
   border: none;
   width: 0;
-  background-image: url("../i/arrow-left.png");
-  width: 26px;
-  height: 17px;
+  background-image: url("../i/pagination-right.png");
+  width: 36px;
+  height: 15px;
   background-position: center;
   cursor: pointer;
   outline-color: transparent;
@@ -2723,7 +2728,7 @@ h1:not([class]) {
 .paginator__btn:hover {
   opacity: 0.6;
 }
-.paginator__btn--next {
+.paginator__btn--prev {
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
 }
@@ -2732,22 +2737,19 @@ h1:not([class]) {
   cursor: auto;
 }
 .paginator__item {
-  width: 37px;
-  height: 37px;
+  width: 43px;
+  height: 43px;
   margin-right: 8px;
   border-radius: 50%;
   position: relative;
   text-align: center;
   list-style: none;
 }
-.paginator__item--dots {
-  margin: 0;
-}
 .paginator__item:last-child {
   margin-right: 0;
 }
 .paginator__item--current {
-  background-color: $red;
+  background-color: #009247;
 }
 .paginator__item--current a {
   color: #fff;
@@ -2755,7 +2757,7 @@ h1:not([class]) {
 }
 .paginator__dots {
   font-weight: 600;
-  font-size: 16px;
+  font-size: 27px;
   line-height: 42px;
   color: $red;
 }
@@ -2767,9 +2769,11 @@ h1:not([class]) {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   font-weight: 600;
-  font-size: 16px;
-  color: $red;
-  border-bottom: 1px solid rgba(242,36,64,0.25);
+  font-size: 27px;
+  letter-spacing: 0.5px;
+  line-height: 1;
+  color: #2e2e2b;
+  border-bottom: 1px solid rgba(46,46,43,0.4);
   -webkit-transition: border-color 0.5s;
   transition: border-color 0.5s;
 }
@@ -3337,7 +3341,7 @@ h1:not([class]) {
   transition: border-color 0.5s;
 }
 .projects {
-  margin-bottom: 90px;
+  margin-bottom: 60px;
 }
 .projects__title {
   display: -webkit-box;
@@ -3364,6 +3368,7 @@ h1:not([class]) {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 30px;
 }
 .projects__item {
   width: calc(100% / 2 - 21px);
@@ -3462,6 +3467,7 @@ h1:not([class]) {
   font-weight: normal;
 }
 .projects__filter {
+  margin-top: 16px;
   margin-bottom: 40px;
 }
 .projects__filter .jq-selectbox__select {
@@ -3746,6 +3752,13 @@ h1:not([class]) {
   .wrapper {
     padding: 0 25px;
   }
+  h1:not([class]) {
+    font-size: 34px;
+    line-height: 36px;
+    color: #2e2e2b;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
   .index h2:not([class]) {
     font-size: 32px;
     line-height: 36px;
@@ -3786,8 +3799,15 @@ h1:not([class]) {
   .paginator {
     margin-top: 55px;
   }
+  .paginator__href {
+    font-size: 19px;
+  }
+  .paginator__item {
+    width: 30px;
+    height: 30px;
+  }
   .paginator__list {
-    margin: 0 15px;
+    margin: 0 9px;
   }
   .header__burger {
     top: 9px;
