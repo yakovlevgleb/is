@@ -2,6 +2,7 @@
 	padding-top: 69px;
 	padding-bottom: 30px;
 	position: relative;
+	overflow: hidden;
 
 	&::before {
 		content: '';
@@ -10,7 +11,7 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-		width: calc(100vw - 17px);
+		width: 100vw;
 		height: 100%;
 		background-color: $specialize-bg;
 		z-index: -1;
@@ -87,5 +88,39 @@
 	&__item-text {
 		padding-top: 32px;
 		border-top: 1px solid $form-border;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.specialize {
+		&__item {
+			width: calc(100% / 2 - 25px);
+			margin-right: 25px;
+
+			&:nth-child(3n + 3) {
+				margin-right: 25px;
+			}
+
+			&:nth-child(2n + 2) {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 550px) {
+	.specialize {
+		&__item {
+			width: calc(100%);
+			margin-right: 0;
+
+			&:nth-child(3n + 3) {
+				margin-right: 0;
+			}
+
+			&:nth-child(2n + 2) {
+				margin-right: 0;
+			}
+		}
 	}
 }
