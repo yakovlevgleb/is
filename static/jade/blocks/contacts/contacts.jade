@@ -1,0 +1,51 @@
+mixin contacts
+	section.contacts
+		.wrapper
+			h1 Контакты
+			.contacts__container
+				.contacts__item
+					span.contacts__subtitle Телефон
+					a(href="tel:70001234567").contacts__link-tel +7 (000) 123-45-67
+					a(href="tel:70001234567").contacts__link-tel +7 (000) 123-45-67
+					a(href="tel:70001234567").contacts__link-tel +7 (000) 123-45-67
+				.contacts__item
+					span.contacts__subtitle Адрес офиса
+					p 123456, г. Москва, Игарский проезд, д. 2, стр. 1 
+				.contacts__item
+					span.contacts__subtitle Email
+					a(href="mailto:aaa@ips.ru").contacts__link-mail aaa@ips.ru
+				.contacts__item
+					span.contacts__subtitle Факс
+					p +7 (000) 123-45-67
+				.contacts__item
+					span.contacts__subtitle Юридический адрес
+					p 123456, г. Москва, ул. Пушкина, д. 5
+			.contacts__schema
+				h2 Схема проезда
+				.contacts__map#map
+				.wis-conten.contacts__text
+					p Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности требуют от нас анализа модели развития. Товарищи! постоянное информационно-пропагандистское обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации существенных финансовых и административных условий.
+			.contacts__form
+				h2 Обратная связь
+				form(action="").js-validate.contacts__form
+					.contacts__form-row
+						input(type="text", placeholder="Ваше имя", data-req="req").input
+						input(type="text", placeholder="Электронная почта", data-req="req", data-type="email").input
+					.contacts__form-row
+						select.select.js-style(data-req="req", data-type="select", data-placeholder="Тема сообщения")
+							option(value="0")
+							option(value="2") Изыскание источников водоснабжения
+							option(value="3") Разработка проектов логистического обеспечения строительства
+							option(value="4") Разработка и утверждение проектов освоения лесов
+							option(value="4") Разработка и утверждение проектов освоения лесов
+							option(value="4") Разработка и утверждение проектов освоения лесов
+							option(value="4") Разработка и утверждение проектов освоения лесов
+							option(value="4") Разработка и утверждение проектов освоения лесов
+							option(value="4") Разработка и утверждение проектов освоения лесов
+							option(value="4") Разработка и утверждение проектов освоения лесов проектов освоения лесов проектов освоения лесов 
+						textarea(placeholder="Текст сообщения", data-req="req").textarea
+					.pseudocheckbox
+						input(type="checkbox", id="PERSONAL", data-req="req", data-type="checkbox").pseudocheckbox__checkbox
+						label(for="PERSONAL").pseudocheckbox__label Даю согласие на обработку&nbsp;
+							a(href="#") персональных данных
+					button(type="submit").btn.btn--yellow.contact-us__btn Отправить

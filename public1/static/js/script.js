@@ -133,8 +133,6 @@ $(document).ready(function() {
 		}
 	}).init();
 
-
-
 	window.is.fancy = ({
 		init: function() {
 			$("[data-fancybox]").fancybox({
