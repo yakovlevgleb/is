@@ -128,7 +128,9 @@ $(document).ready(function() {
 	window.is.inputStyler = ({
 		init: function() {
 			if($('select').length) {
-				$('select').styler();
+				$('select').styler({
+					selectSmartPositioning: 'false'
+				});
 			}
 		}
 	}).init();

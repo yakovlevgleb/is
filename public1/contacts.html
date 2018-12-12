@@ -66,31 +66,31 @@
         </div>
         <div class="contacts__form">
           <h2>Обратная связь</h2>
-          <form action="" class="js-validate contacts__form">
+          <p class="contacts__form-warn">* - обозначены обязательные поля для отправки сообщения </p>
+          <form action="" class="js-validate contacts__cont">
             <div class="contacts__form-row">
-              <input type="text" placeholder="Ваше имя" data-req="req" class="input"/>
-              <input type="text" placeholder="Электронная почта" data-req="req" data-type="email" class="input"/>
+              <div class="contacts__form-col">
+                <input type="text" placeholder="Ваше имя*" data-req="req" class="input"/>
+                <input type="text" placeholder="Электронная почта*" data-req="req" data-type="email" class="input"/>
+                <select data-req="req" data-type="select" data-placeholder="Тема сообщения*" class="select js-style">
+                  <option value="0"></option>
+                  <option value="2">Изыскание источников водоснабжения</option>
+                  <option value="3">Разработка проектов логистического обеспечения строительства</option>
+                  <option value="4">Разработка и утверждение проектов освоения лесов</option>
+                  <option value="4">Разработка и утверждение проектов освоения лесов</option>
+                </select>
+              </div>
+              <div class="contacts__form-col">
+                <textarea placeholder="Текст сообщения" class="textarea contacts__textarea"></textarea>
+              </div>
             </div>
             <div class="contacts__form-row">
-              <select data-req="req" data-type="select" data-placeholder="Тема сообщения" class="select js-style">
-                <option value="0"></option>
-                <option value="2">Изыскание источников водоснабжения</option>
-                <option value="3">Разработка проектов логистического обеспечения строительства</option>
-                <option value="4">Разработка и утверждение проектов освоения лесов</option>
-                <option value="4">Разработка и утверждение проектов освоения лесов</option>
-                <option value="4">Разработка и утверждение проектов освоения лесов</option>
-                <option value="4">Разработка и утверждение проектов освоения лесов</option>
-                <option value="4">Разработка и утверждение проектов освоения лесов</option>
-                <option value="4">Разработка и утверждение проектов освоения лесов</option>
-                <option value="4">Разработка и утверждение проектов освоения лесов проектов освоения лесов проектов освоения лесов </option>
-              </select>
-              <textarea placeholder="Текст сообщения" data-req="req" class="textarea"></textarea>
+              <div class="pseudocheckbox">
+                <input type="checkbox" id="PERSONAL" data-req="req" data-type="checkbox" class="pseudocheckbox__checkbox"/>
+                <label for="PERSONAL" class="pseudocheckbox__label">Даю согласие на обработку&nbsp;<a href="#">персональных данных</a></label>
+              </div>
+              <button type="submit" class="btn btn--yellow contact-us__btn">Отправить</button>
             </div>
-            <div class="pseudocheckbox">
-              <input type="checkbox" id="PERSONAL" data-req="req" data-type="checkbox" class="pseudocheckbox__checkbox"/>
-              <label for="PERSONAL" class="pseudocheckbox__label">Даю согласие на обработку&nbsp;<a href="#">персональных данных</a></label>
-            </div>
-            <button type="submit" class="btn btn--yellow contact-us__btn">Отправить</button>
           </form>
         </div>
       </div>
