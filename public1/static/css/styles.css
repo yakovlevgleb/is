@@ -2049,6 +2049,7 @@ h2:not([class]) {
   outline-color: transparent;
   font-family: 'Proxima Nova';
   border-radius: 0;
+  padding: 0;
 }
 .input ::-webkit-input-placeholder {
   color: rgba(46,46,43,0.4);
@@ -2079,6 +2080,7 @@ h2:not([class]) {
   resize: none;
   border-radius: 0;
   min-height: 97px;
+  padding: 0;
 }
 .textarea ::-webkit-input-placeholder {
   color: rgba(46,46,43,0.4);
@@ -2095,7 +2097,13 @@ h2:not([class]) {
 .textarea.warning {
   border-color: #e20;
 }
+.pseudocheckbox {
+  position: relative;
+}
 .pseudocheckbox__checkbox {
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 0;
   height: 0;
   opacity: 0;
@@ -2212,6 +2220,9 @@ h2:not([class]) {
 .select .jq-selectbox__select-text {
   padding-right: 20px;
 }
+.select .jq-selectbox__select-text.placeholder {
+  color: rgba(46,46,43,0.4);
+}
 .select .jq-selectbox__dropdown li {
   padding: 15px 0;
   border-bottom: 1px solid rgba(46,46,43,0.4);
@@ -2238,7 +2249,7 @@ h2:not([class]) {
   text-align: left;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  left: -75px;
+  padding-right: 75px;
   position: relative;
 }
 .developers__href {
@@ -4236,8 +4247,8 @@ h2:not([class]) {
     max-width: 170px;
   }
   .intro {
-    margin-top: -117px;
-    padding-top: 117px;
+    margin-top: -122px;
+    padding-top: 122px;
   }
   .intro__carousel .swiper-container {
     overflow: hidden;
@@ -4463,7 +4474,7 @@ h2:not([class]) {
     left: -100%;
   }
   .developers {
-    left: 0;
+    padding-right: 0;
     -ms-flex-item-align: start;
         align-self: flex-start;
   }
