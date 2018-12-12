@@ -1,0 +1,19 @@
+include blocks/blocks
+
+doctype html
+html(lang="ru")
+	+head
+	body
+		+header(style="background-image: url('./img/header-bg.jpg');")
+		.not-found
+			.wrapper
+				span.not-found__404 404
+				h1 Страница не найдена
+				.not-found__text.wis-content
+					p Вы неправильно набрали адрес. Возможно такой страницы больше не существует.
+						br 
+						| Воспользуйтесь главным меню, чтобы перейти на другую страницу.
+					p Вы также можете вернуться 
+						a(href="/") на главную страницу
+		+footer
+		+scripts

@@ -1,0 +1,21 @@
+mixin search
+	section.search-page
+		.wrapper
+			h1 Поиск по сайту
+			form(action="").search-page__form.js-validate
+				input(type="text", placeholder="Поиск по сайту...", data-req="req").input
+				button(type="submit").btn.btn.search-page__btn.contact-us__btn Найти
+			.search-page__count По вашему запросу найдено 5 результов.
+			ol.search-page__list
+				li.search-page__item
+					a(href="#").search-page__link Главная
+					p.search-page__text Какой-то текст в котором нашлось слово
+				li.search-page__item
+					a(href="#").search-page__link Главная
+					p.search-page__text Какой-то текст в котором нашлось слово
+				li.search-page__item
+					a(href="#").search-page__link Главная
+					p.search-page__text Какой-то текст в котором нашлось слово
+				li.search-page__item
+					a(href="#").search-page__link Главная
+					p.search-page__text Какой-то текст в котором нашлось слово
