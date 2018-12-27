@@ -82,13 +82,9 @@
 
 	window.is.intro = ({
 		init: function() {
-			var mySwiper = new Swiper('.swiper-container', {
+			var mySwiper = new Swiper('.js-introcar', {
 				speed: 1100,
-
 				loop: true,
-				// mousewheel: {
-				// 	releaseOnEdges: true
-				// },
 				breakpoints: {
 					0: {
 						slidesPerView: 1,
@@ -202,5 +198,57 @@
 			});
 		}
 	}).init();
+
+	window.is.photogallery = ({
+		init: function () {
+			var mySwiper = new Swiper('.js-photogalerycar', {
+				speed: 1100,
+				loop: true,
+				slidesPerView: 2,
+				spaceBetween: 42,
+				navigation: {
+					nextEl: '.photogalery .swiper-button-next',
+					prevEl: '.photogalery .swiper-button-prev',
+				},
+				breakpoints: {
+					0: {
+						slidesPerView: 1,
+						spaceBetween: 0
+					},
+
+					768: {
+						slidesPerView: 1,
+						spaceBetween: 0
+					}
+				}
+			});
+		}
+	}).init();
+
+		window.is.videogallery = ({
+			init: function () {
+				var mySwiper = new Swiper('.js-videogalery', {
+					speed: 1100,
+					loop: true,
+					slidesPerView: 2,
+					spaceBetween: 42,
+					navigation: {
+						nextEl: '.videogalery .swiper-button-next',
+						prevEl: '.videogalery .swiper-button-prev',
+					},
+					breakpoints: {
+						0: {
+							slidesPerView: 1,
+							spaceBetween: 0
+						},
+
+						768: {
+							slidesPerView: 1,
+							spaceBetween: 0
+						}
+					}
+				});
+			}
+		}).init();
 
 });
