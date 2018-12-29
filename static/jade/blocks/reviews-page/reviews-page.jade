@@ -1,0 +1,33 @@
+include ./../standart/__paginator
+
+mixin reviews-page
+	section.reviews.reviews--page
+		.wrapper
+			h1 Отзывы
+			ul.reviews__list
+				li.reviews__item
+					a(href="./img/reviews-1.jpg", data-fancybox).reviews__href
+						img(src="./img/reviews-1.jpg", alt="")
+
+				li.reviews__item
+					a(href="./img/reviews-2.jpg", data-fancybox).reviews__href
+						img(src="./img/reviews-2.jpg", alt="")
+
+				li.reviews__item
+					a(href="./img/reviews-3.jpg", data-fancybox).reviews__href
+						img(src="./img/reviews-3.jpg", alt="")
+
+				li.reviews__item
+					a(href="./img/reviews-1.jpg", data-fancybox).reviews__href
+						img(src="./img/reviews-1.jpg", alt="")
+
+				li.reviews__item
+					a(href="./img/reviews-2.jpg", data-fancybox).reviews__href
+						img(src="./img/reviews-2.jpg", alt="")
+
+				li.reviews__item
+					a(href="./img/reviews-3.jpg", data-fancybox).reviews__href
+						img(src="./img/reviews-3.jpg", alt="")
+
+			+paginator
+
