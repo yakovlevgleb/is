@@ -2009,6 +2009,12 @@ h3:not([class]) {
 .more:hover {
   border-color: transparent;
 }
+.activities--page {
+  margin-bottom: 50px;
+}
+.back-to-list {
+  margin-top: 30px;
+}
 .btn {
   font-size: 14px;
   line-height: 18px;
@@ -2434,7 +2440,7 @@ h3:not([class]) {
   bottom: -32px;
   padding-left: 15px;
   padding-right: 15px;
-  right: 29px;
+  right: -1px;
   background-color: #009247;
   width: 261px;
   display: -webkit-box;
@@ -3721,7 +3727,6 @@ h3:not([class]) {
           flex-direction: column;
   position: relative;
   padding: 40px 0;
-  width: calc(50% - 21px - 100px);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -4417,6 +4422,9 @@ h3:not([class]) {
     max-width: 1230px;
     padding: 0 30px;
   }
+  .search {
+    right: 29px;
+  }
   .intro__slider-title {
     font-size: 48px;
     line-height: 48px;
@@ -4804,6 +4812,8 @@ h3:not([class]) {
   }
   .footer__copyrights {
     margin-bottom: 30px;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
   }
   .footer__bottom {
     -webkit-box-orient: vertical;
