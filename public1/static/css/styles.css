@@ -2218,10 +2218,16 @@ h3:not([class]) {
   z-index: 1;
 }
 .select .jq-selectbox__dropdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: #fff;
   max-height: 200px;
-  overflow: auto;
-  padding: 0 20px;
+  overflow: hidden;
   width: calc(100% + 17px) !important;
   top: 40px !important;
   -webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.15);
@@ -2234,7 +2240,7 @@ h3:not([class]) {
   color: rgba(46,46,43,0.4);
 }
 .select .jq-selectbox__dropdown li {
-  padding: 15px 0;
+  padding: 15px 20px;
   border-bottom: 1px solid rgba(46,46,43,0.4);
   font-size: 18px;
   line-height: 30px;
@@ -2250,7 +2256,7 @@ h3:not([class]) {
   color: #009247;
 }
 .select .jq-selectbox__dropdown ul {
-  overflow: visible;
+  overflow: auto;
 }
 .select .warning {
   border-color: #e20;
@@ -2304,6 +2310,10 @@ h3:not([class]) {
   padding-top: 69px;
   padding-bottom: 68px;
 }
+.footer .search {
+  bottom: -7px;
+  right: -1px;
+}
 .footer__top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2315,7 +2325,7 @@ h3:not([class]) {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 38px;
+  margin-bottom: 44px;
 }
 .footer__bottom {
   display: -webkit-box;
@@ -2328,6 +2338,9 @@ h3:not([class]) {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .footer__nav-list {
   display: -webkit-box;
@@ -2349,16 +2362,16 @@ h3:not([class]) {
   position: relative;
 }
 .footer__nav-item {
-  margin-right: 40px;
+  margin-right: 38px;
 }
 .footer__nav-item:last-child {
   margin-right: 0;
 }
-.footer__nav-item--search .active {
-  opacity: 0.5;
+.footer__nav-item.active .footer__nav-link {
+  border: none;
 }
 .footer__nav {
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 .footer__nav-link {
   font-size: 14px;
@@ -2388,7 +2401,7 @@ h3:not([class]) {
   line-height: 18px;
   color: #fff;
   font-weight: 600;
-  margin-right: 40px;
+  margin-right: 38px;
   letter-spacing: 1.12px;
 }
 .footer__phones-link:last-child {
@@ -2410,13 +2423,18 @@ h3:not([class]) {
   background-color: transparent;
   outline-color: transparent;
   cursor: pointer;
+  display: inline-block;
+  vertical-align: top;
+}
+.footer .search-btn.open {
+  opacity: 0.5;
 }
 .search {
   position: absolute;
-  bottom: -12px;
+  bottom: -32px;
   padding-left: 15px;
   padding-right: 15px;
-  right: 0;
+  right: 29px;
   background-color: #009247;
   width: 261px;
   display: -webkit-box;
@@ -3112,7 +3130,7 @@ h3:not([class]) {
   font-weight: 600;
   position: relative;
   display: inline-block;
-  margin-left: -29px;
+  margin-left: -23px;
   visibility: hidden;
   -webkit-transition: visibility 0.5s;
   transition: visibility 0.5s;
@@ -3554,6 +3572,15 @@ h3:not([class]) {
 .reviews {
   margin-bottom: 90px;
 }
+.reviews--page .reviews__list {
+  margin-bottom: -50px;
+}
+.reviews--page .reviews__item {
+  margin-bottom: 100px;
+}
+.reviews--page .reviews__item:nth-child(3n+2) {
+  margin-bottom: 50px;
+}
 .reviews__title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3579,11 +3606,13 @@ h3:not([class]) {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .reviews__item {
   width: calc(100% / 3 - 21px);
 }
-.reviews__item:nth-child(2) {
+.reviews__item:nth-child(3n+2) {
   margin-top: 50px;
 }
 .reviews__href {
@@ -4385,6 +4414,7 @@ h3:not([class]) {
 }
 @media only screen and (max-width: 1441px) {
   .wrapper {
+    max-width: 1230px;
     padding: 0 30px;
   }
   .intro__slider-title {
@@ -4612,6 +4642,13 @@ h3:not([class]) {
     display: none;
   }
   .reviews {
+    margin-bottom: 50px;
+  }
+  .reviews--page .reviews__item {
+    margin-bottom: 50px;
+  }
+  .reviews--page .reviews__item:nth-child(3n+2) {
+    margin-top: 0;
     margin-bottom: 50px;
   }
   .reviews__list {
