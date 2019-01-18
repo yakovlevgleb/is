@@ -2271,14 +2271,11 @@ h3:not([class]) {
   text-align: left;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  padding-right: 75px;
   position: relative;
 }
 .developers__href {
   position: relative;
   display: inline-block;
-  max-width: 75px;
-  padding-left: 85px;
   -webkit-transition: color 0.5s;
   transition: color 0.5s;
   text-decoration: none;
@@ -2295,14 +2292,13 @@ h3:not([class]) {
 .developers__dextra {
   position: absolute;
   top: 50%;
-  left: 0;
-  margin-right: 10px;
+  left: -10px;
   padding-right: 6px;
   padding-left: 6px;
   -webkit-transition: background-color 0.4s;
   transition: background-color 0.4s;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
   color: #fff;
   border-radius: 3px;
   background-color: #009247;
@@ -4149,6 +4145,9 @@ h3:not([class]) {
 .contacts__form-col .select:last-child {
   margin-bottom: 0;
 }
+.contacts__form-col .textarea {
+  height: 100%;
+}
 .contacts__textarea {
   height: 100%;
 }
@@ -4778,9 +4777,16 @@ h3:not([class]) {
     left: -100%;
   }
   .developers {
-    padding-right: 0;
     -ms-flex-item-align: start;
         align-self: flex-start;
+  }
+  .developers__href {
+    padding-left: 85px;
+  }
+  .developers__dextra {
+    left: 0;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
   }
   .footer__top {
     -webkit-box-pack: start;
