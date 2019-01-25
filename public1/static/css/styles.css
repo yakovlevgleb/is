@@ -2044,8 +2044,8 @@ h3:not([class]) {
   left: -100%;
   z-index: -1;
   background-color: #009247;
-  -webkit-transition: all 600ms cubic-bezier(0.39, -0.03, 0.51, 1.07);
-  transition: all 600ms cubic-bezier(0.39, -0.03, 0.51, 1.07);
+  -webkit-transition: all 600ms ease-out;
+  transition: all 600ms ease-out;
 }
 .btn--yellow:before {
   background-color: #e7cb16;
@@ -2293,7 +2293,7 @@ h3:not([class]) {
   position: absolute;
   top: 50%;
   left: -10px;
-  padding-right: 6px;
+  padding-right: 5px;
   padding-left: 6px;
   -webkit-transition: background-color 0.4s;
   transition: background-color 0.4s;
@@ -2302,7 +2302,7 @@ h3:not([class]) {
   color: #fff;
   border-radius: 3px;
   background-color: #009247;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Verdana, Helvetica, sans-serif;
   font-size: 12px;
   font-weight: 900;
   line-height: 21px;
