@@ -70,6 +70,7 @@
 		position: relative;
 		letter-spacing: 0;
 		display: inline-block;
+		transition: color .7s;
 
 		&::after {
 			content: '';
@@ -80,6 +81,15 @@
 			position: relative;
 			margin-left: 11px;
 			line-height: 33px;
+			transition: filter 1s;
+		}
+
+		&:hover {
+			color: $white;
+
+			&::after {
+				filter: brightness(0) invert(1)
+			}
 		}
 	}
 }

@@ -12,19 +12,25 @@
 		max-width: 867px;
 		padding-top: 46px;
 		margin-bottom: 38px;
+
 	}
 
 	&__item {
-		width: 261px;
-		margin-right: 42px;
+		// width: 261px;
+		width: calc(100% / 3 - 42px)
+		margin-left: 42px;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
 		margin-bottom: 52px;
 		color: $service-text-color;
 
-		&:nth-child(3n+3) {
-			margin-right: 0;
+		&:nth-child(1) {
+			margin-left: 0;
+		}
+
+		&:nth-child(4) {
+			margin-left: 0;
 		}
 	}
 
@@ -164,10 +170,8 @@
 
 		&__item {
 			width: calc(50% - 21px);
-
-			&:nth-child(3n+3) {
-				margin-right: 42px;
-			}
+			margin-right: 42px;
+			margin-left: 0;
 
 			&:nth-child(2n+2) {
 				margin-right: 0;
@@ -194,10 +198,6 @@
 		&__item {
 			width: 100%;
 			margin-right: 0;
-
-			&:nth-child(3n+3) {
-				margin-right: 0;
-			}
 
 			&:nth-child(2n+2) {
 				margin-right: 0;
