@@ -34,6 +34,14 @@ body {
 	font-size: 18px;
 	line-height: 30px;
 	color: $main-text;
+	min-width: 320px;
+	overflow-x: hidden;
+	&.index {
+		.main {
+			padding: 0 !important;
+			min-height: auto;
+		}
+	}
 }
 
 .hidden-blocks {
@@ -43,6 +51,18 @@ body {
 .open-menu {
 	position: fixed;
 	overflow-y: hidden;
+}
+
+.main {
+	display: block;
+	padding 80px 0 .1px;
+	min-height: calc(100vh - 432px);
+}
+
+@media only screen and (max-width: 767px) {
+	.main {
+		padding-top: 30px;
+	}
 }
 
 .wrapper {
