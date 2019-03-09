@@ -1,45 +1,45 @@
-$(document).ready(function() {
+$(document).ready(function () {
 	window.is = {};
 
 	window.is.obj = ({
-		init: function() {
+		init: function () {
 			if ($('.js-burger').length) {
-				 $('.js-burger').on('click', function() {
-						var _t = $(this),
-								nav = _t.siblings('.navigation'),
-								body = $('body');
-						if (!_t.hasClass('header__burger--active')) {
-							 _t.addClass('header__burger--active');
-							 body.addClass('open-menu');
-							 nav.fadeIn('350');
-						} else {
-							 _t.removeClass('header__burger--active');
-							 body.removeClass('open-menu');
-							 nav.fadeOut('350');
-						}
-						return false;
-				 });
+				$('.js-burger').on('click', function () {
+					var _t = $(this),
+						nav = _t.siblings('.navigation'),
+						body = $('body');
+					if (!_t.hasClass('header__burger--active')) {
+						_t.addClass('header__burger--active');
+						body.addClass('open-menu');
+						nav.fadeIn('350');
+					} else {
+						_t.removeClass('header__burger--active');
+						body.removeClass('open-menu');
+						nav.fadeOut('350');
+					}
+					return false;
+				});
 			}
 		}
 	}).init();
 
 	window.is.form = ({
 
-		init: function() {
+		init: function () {
 
 			var _th = this;
 
-			$('.js-validate').submit(function(e) {
+			$('.js-validate').submit(function (e) {
 				if (!_th.checkForm($(this))) {
 					return false;
 				}
 			});
 		},
 
-		checkForm: function(form) {
+		checkForm: function (form) {
 			var checkResult = true;
 			form.find('.warning').removeClass('warning');
-			form.find('input, textarea, select').each(function() {
+			form.find('input, textarea, select').each(function () {
 				if ($(this).data('req')) {
 					switch ($(this).data('type')) {
 						case 'checkbox':
@@ -81,7 +81,7 @@ $(document).ready(function() {
 	}).init();
 
 	window.is.intro = ({
-		init: function() {
+		init: function () {
 			var mySwiper = new Swiper('.js-introcar', {
 				speed: 1100,
 				loop: true,
@@ -98,12 +98,12 @@ $(document).ready(function() {
 				}
 			});
 
-			$('body').on('click', '.js-slide-prev', function() {
+			$('body').on('click', '.js-slide-prev', function () {
 				mySwiper.slidePrev();
 				return;
 			});
 
-			$('body').on('click', '.js-slide-next', function() {
+			$('body').on('click', '.js-slide-next', function () {
 				mySwiper.slideNext();
 				return;
 			});
@@ -111,8 +111,8 @@ $(document).ready(function() {
 	}).init();
 
 	window.is.shave = ({
-		init: function() {
-			if($('.js-projects-shave').length) {
+		init: function () {
+			if ($('.js-projects-shave').length) {
 				$('.js-projects-shave').shave(160);
 			}
 			if ($('.js-service-shave').length) {
@@ -122,8 +122,8 @@ $(document).ready(function() {
 	}).init();
 
 	window.is.inputStyler = ({
-		init: function() {
-			if($('select').length) {
+		init: function () {
+			if ($('select').length) {
 				$('select').styler({
 					selectSmartPositioning: 'false'
 				});
@@ -132,25 +132,25 @@ $(document).ready(function() {
 	}).init();
 
 	window.is.fancy = ({
-		init: function() {
+		init: function () {
 			$("[data-fancybox]").fancybox({
-				lang : 'ru',
-				i18n : {
-					'ru' : {
-						CLOSE       : 'Закрыть',
-						NEXT        : 'Следующий',
-						PREV        : 'Предыдущий',
-						ERROR       : 'Запрошенный контент не может быть загружен. <br> Повторите попытку позже.',
-						PLAY_START  : 'Начать слайд-шоу',
-						PLAY_STOP   : 'Остановить слайд-шоу',
-						FULL_SCREEN : 'Полный экран',
-						THUMBS      : 'Эскизы',
-						DOWNLOAD    : 'Скачать',
-						SHARE       : 'Поделиться',
-						ZOOM        : 'Увеличить'
+				lang: 'ru',
+				i18n: {
+					'ru': {
+						CLOSE: 'Закрыть',
+						NEXT: 'Следующий',
+						PREV: 'Предыдущий',
+						ERROR: 'Запрошенный контент не может быть загружен. <br> Повторите попытку позже.',
+						PLAY_START: 'Начать слайд-шоу',
+						PLAY_STOP: 'Остановить слайд-шоу',
+						FULL_SCREEN: 'Полный экран',
+						THUMBS: 'Эскизы',
+						DOWNLOAD: 'Скачать',
+						SHARE: 'Поделиться',
+						ZOOM: 'Увеличить'
 					}
 				},
-				buttons : [
+				buttons: [
 					'close'
 				],
 			});
@@ -158,9 +158,9 @@ $(document).ready(function() {
 	}).init();
 
 	window.is.yaMap = ({
-		init: function() {
+		init: function () {
 			if ($('#map').length) {
-				ymaps.ready(function() {
+				ymaps.ready(function () {
 					var myMap = new ymaps.Map('map', {
 						center: [
 							55.857334, 37.647015
@@ -171,18 +171,23 @@ $(document).ready(function() {
 
 					myMap.behaviors.disable('scrollZoom');
 
-					ymaps.route([
-							{ type: 'Старт', point: [55.855738, 37.654481] },
-					    { type: 'Конец', point: [55.858276, 37.640327] }
+					ymaps.route([{
+							type: 'Старт',
+							point: [55.855738, 37.654481]
+						},
+						{
+							type: 'Конец',
+							point: [55.858276, 37.640327]
+						}
 					], {
-					    mapStateAutoApply: true,
-							routingMode: "pedestrian"
+						mapStateAutoApply: true,
+						routingMode: "pedestrian"
 					}).then(function (route) {
-					    route.getPaths().options.set({
-					        strokeColor: '83dc5b',
-					        opacity: 0.9
-					    });
-					    myMap.geoObjects.add(route);
+						route.getPaths().options.set({
+							strokeColor: '83dc5b',
+							opacity: 0.9
+						});
+						myMap.geoObjects.add(route);
 					});
 
 				});
@@ -191,10 +196,24 @@ $(document).ready(function() {
 	}).init();
 
 	window.is.search = ({
-		init: function() {
-			$('.js-open-search').click(function() {
+		init: function () {
+			$('.js-open-search').click(function () {
 				$(this).toggleClass('open');
 				$(this).closest('.navigation, .footer__column').find('.js-search-form').toggleClass('active')
+			});
+
+			$(document).on('click', function (e) {
+				if (!$(e.target).closest('.navigation__item--search').length && !$(e.target).closest('.footer__nav-item--search').length && !$(e.target).closest('.footer .search').length) {
+					if ($('.header .search-btn.open').length ) {
+						$('.header .search-btn.open').removeClass('open');
+						$('.navigation').find('.js-search-form').removeClass('active');
+					}
+					if ($('.footer .search-btn.open').length ) {
+						$('.footer .search-btn.open').removeClass('open');
+						$('.footer__column').find('.js-search-form').removeClass('active');
+					}
+					e.stopPropagation();
+			   }
 			});
 		}
 	}).init();
@@ -216,7 +235,7 @@ $(document).ready(function() {
 						spaceBetween: 0
 					},
 
-					768: {
+					767: {
 						slidesPerView: 1,
 						spaceBetween: 0
 					}
@@ -225,30 +244,30 @@ $(document).ready(function() {
 		}
 	}).init();
 
-		window.is.videogallery = ({
-			init: function () {
-				var mySwiper = new Swiper('.js-videogalery', {
-					speed: 1100,
-					loop: true,
-					slidesPerView: 2,
-					spaceBetween: 42,
-					navigation: {
-						nextEl: '.videogalery .swiper-button-next',
-						prevEl: '.videogalery .swiper-button-prev',
+	window.is.videogallery = ({
+		init: function () {
+			var mySwiper = new Swiper('.js-videogalery', {
+				speed: 1100,
+				loop: true,
+				slidesPerView: 2,
+				spaceBetween: 42,
+				navigation: {
+					nextEl: '.videogalery .swiper-button-next',
+					prevEl: '.videogalery .swiper-button-prev',
+				},
+				breakpoints: {
+					0: {
+						slidesPerView: 1,
+						spaceBetween: 0
 					},
-					breakpoints: {
-						0: {
-							slidesPerView: 1,
-							spaceBetween: 0
-						},
 
-						768: {
-							slidesPerView: 1,
-							spaceBetween: 0
-						}
+					767: {
+						slidesPerView: 1,
+						spaceBetween: 0
 					}
-				});
-			}
-		}).init();
+				}
+			});
+		}
+	}).init();
 
 });

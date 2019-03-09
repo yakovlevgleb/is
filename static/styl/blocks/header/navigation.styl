@@ -1,6 +1,6 @@
 .navigation {
-  justify-content: center;
-  flex-direction: column;
+	justify-content: center;
+	flex-direction: column;
 
 	&__list {
 		display: flex;
@@ -34,7 +34,12 @@
 		border: none;
 		background-color: $trn;
 		outline-color: $trn;
+		transition opacity .4s
 		cursor: pointer;
+
+		&:hover {
+			opacity: .5;
+		}
 	}
 
 	&__href {
