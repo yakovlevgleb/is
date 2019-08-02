@@ -38,6 +38,7 @@ const imagemin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant');
 const uglify = require('gulp-uglify');
 const wait = require('gulp-wait');
+const sortCSSmq = require('sort-css-media-queries');
 
 gulp.task('clean', function() {
 	return del(dirs.build);
@@ -61,7 +62,9 @@ gulp.task('stylus', function() {
 		autoprefixer({
 			browsers: ['last 2 version']
 		}),
-		mqpacker
+		mqpacker({
+			sort: sortCSSmq
+		})
 	])).
 	pipe(sourcemaps.write('/')).
 	pipe(gulp.dest(dirs.build + '/static/css/')).

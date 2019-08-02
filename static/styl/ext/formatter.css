@@ -61,9 +61,9 @@
 	user-select: none;
 	white-space: nowrap;
 }
-.jq-selectbox {
+/* .jq-selectbox {
 	z-index: 10;
-}
+} */
 .jq-selectbox__select {
 	position: relative;
 }
