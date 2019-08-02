@@ -5,50 +5,51 @@ html(lang="ru")
 	+head
 	body
 		+header(style="background-image: url('./img/header-bg.jpg');")
-		+breadcrumbs
-		section.service-inner
-			.wrapper
-				h1 Проектно-изыскательские работы
-				img(src="./img/service-inner.jpg", alt="").service-inner__img
-				section.wis-content
-					p С 2007 г. по настоящее время компания выполнила ряд работ в области строительства магистральных газопроводов и компрессорных станций, в ходе которых работники компании зарекомендовали себя квалифицированными специалистами. В своей деятельности компания придерживается основных принципов делового сотрудничества и соблюдения взаимных договоренностей с Заказчиком и партнерами.
-					p На сегодняшний день деятельность компании сосредоточена на выполнении следующих работ:
-			+photogalery
-			section.about
+		main.main
+			+breadcrumbs
+			section.service-inner
 				.wrapper
-					h2 Преимущества работы с нами
-					ul.about__list
-						li.about__item
-							img(src="./img/about/icon1.png", alt="").about__item-icon
-							span.about__item-text ООО «ППП Искусственные сооружения» образовано в 2001 году
-						li.about__item
-							img(src="./img/about/icon2.png", alt="").about__item-icon
-							span.about__item-text Штатная численность компании свыше тридцати человек
-						li.about__item
-							img(src="./img/about/icon3.png", alt="").about__item-icon
-							span.about__item-text Собственная техническая база и автотранспорт
-						li.about__item
-							img(src="./img/about/icon4.png", alt="").about__item-icon
-							span.about__item-text Решение производственных задач качественно и в оптимальные сроки
-			+videogalery
-			section.reviews
-				.wrapper
-					.reviews__title
-						h2 Отзывы
-						a(href="#").more Все проекты
-					ul.reviews__list
-						li.reviews__item
-							a(href="./img/reviews-1.jpg", data-fancybox).reviews__href
-								img(src="./img/reviews-1.jpg", alt="")
+					h1 Проектно-изыскательские работы
+					img(src="./img/service-inner.jpg", alt="").service-inner__img
+					section.wis-content
+						p С 2007 г. по настоящее время компания выполнила ряд работ в области строительства магистральных газопроводов и компрессорных станций, в ходе которых работники компании зарекомендовали себя квалифицированными специалистами. В своей деятельности компания придерживается основных принципов делового сотрудничества и соблюдения взаимных договоренностей с Заказчиком и партнерами.
+						p На сегодняшний день деятельность компании сосредоточена на выполнении следующих работ:
+				+photogalery
+				section.about
+					.wrapper
+						h2 Преимущества работы с нами
+						ul.about__list
+							li.about__item
+								img(src="./img/about/icon1.png", alt="").about__item-icon
+								span.about__item-text ООО «ППП Искусственные сооружения» образовано в 2001 году
+							li.about__item
+								img(src="./img/about/icon2.png", alt="").about__item-icon
+								span.about__item-text Штатная численность компании свыше тридцати человек
+							li.about__item
+								img(src="./img/about/icon3.png", alt="").about__item-icon
+								span.about__item-text Собственная техническая база и автотранспорт
+							li.about__item
+								img(src="./img/about/icon4.png", alt="").about__item-icon
+								span.about__item-text Решение производственных задач качественно и в оптимальные сроки
+				+videogalery
+				section.reviews
+					.wrapper
+						.reviews__title
+							h2 Отзывы
+							a(href="#").more Все проекты
+						ul.reviews__list
+							li.reviews__item
+								a(href="./img/reviews-1.jpg", data-fancybox).reviews__href
+									img(src="./img/reviews-1.jpg", alt="")
 
-						li.reviews__item
-							a(href="./img/reviews-2.jpg", data-fancybox).reviews__href
-								img(src="./img/reviews-2.jpg", alt="")
+							li.reviews__item
+								a(href="./img/reviews-2.jpg", data-fancybox).reviews__href
+									img(src="./img/reviews-2.jpg", alt="")
 
-						li.reviews__item
-							a(href="./img/reviews-3.jpg", data-fancybox).reviews__href
-								img(src="./img/reviews-3.jpg", alt="")
-			+contact-us
+							li.reviews__item
+								a(href="./img/reviews-3.jpg", data-fancybox).reviews__href
+									img(src="./img/reviews-3.jpg", alt="")
+				+contact-us
 		+footer
 		+scripts
 		+hidden-blocks

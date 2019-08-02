@@ -15,6 +15,9 @@
 		position: relative;
 		padding: 40px 0;
 		box-sizing: border-box;
+		width: 100%;
+		max-width: 458px;
+		margin-right: 80px;
 
 		.input {
 			margin-bottom: 42px;
@@ -102,9 +105,14 @@
 			color: $title-color;
 		}
 
-		&--email {
+		&--email, &--tel {
 			a {
 				align-self: flex-start;
+			}
+		}
+
+		&--email {
+			a {
 				border-bottom: 1px solid $title-color-hover;
 				transition: border-color .5s;
 
@@ -130,6 +138,8 @@
 
 		&__form {
 			width: auto;
+			max-width: 100%;
+			margin-right: 0;
 			order: 2;
 		}
 
