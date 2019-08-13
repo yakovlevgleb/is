@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <meta charset="UTF-8"/>
+    <meta name="cmsmagazine" content="6a5de8b480a9f417d465ec3935efb0fd"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>ИСКУССТВЕННЫЕ СООРУЖЕНИЯ</title>
+    <link rel="stylesheet" href="./static/css/styles.css"/>
+    <link rel="icon" type="image/x-icon" href="./static/i/favicon.ico"/>
+    <link rel="shortcut icon" type="image/ico" href="./static/i/favicon.ico"/>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  </head>
+  <body>
+    <header class="header" style="background-image: url('./img/header-bg.jpg');">
+      <div class="wrapper">
+        <div class="logo"><a href="#" class="logo__href"><img src="./img/logo.png" alt="" class="logo__img"/></a></div>
+        <nav class="navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item active"><a href="#thanks" data-fancybox="thanks" class="navigation__href btn">О компании</a></li>
+            <li class="navigation__item"><a href="#" class="navigation__href btn">Услуги</a></li>
+            <li class="navigation__item"><a href="#" class="navigation__href btn">Проекты</a></li>
+            <li class="navigation__item"><a href="#" class="navigation__href btn">Партнеры</a></li>
+            <li class="navigation__item"><a href="#" class="navigation__href btn">Контакты</a></li>
+            <li class="navigation__item navigation__item--search">
+              <button type="button" class="search-btn js-open-search"></button>
+              <form action="" class="search js-search-form">
+                <input type="text" placeholder="Введите запрос" class="search__input"/>
+                <button type="submit" class="search__btn"></button>
+              </form>
+            </li>
+          </ul>
+        </nav>
+        <button type="button" class="header__burger js-burger"><i></i></button>
+      </div>
+    </header>
+    <main class="main">
+      <section class="breadcrumbs">
+        <div class="wrapper"><a href="#" class="breadcrumbs__href">Главная</a><span class="breadcrumbs__separator">/</span><span class="breadcrumbs__href">Внутренняя</span></div>
+      </section>
+      <section class="contacts">
+        <div class="wrapper">
+          <h1>Контакты</h1>
+          <div class="contacts__container">
+            <div class="contacts__item"><span class="contacts__subtitle">Телефон</span><a href="tel:70001234567" class="contacts__link-tel">+7 (000) 123-45-67</a><a href="tel:70001234567" class="contacts__link-tel">+7 (000) 123-45-67</a><a href="tel:70001234567" class="contacts__link-tel">+7 (000) 123-45-67</a></div>
+            <div class="contacts__item"><span class="contacts__subtitle">Адрес офиса</span>
+              <p>123456, г. Москва, Игарский проезд, д. 2, стр. 1 </p>
+            </div>
+            <div class="contacts__item"><span class="contacts__subtitle">Email</span><a href="mailto:aaa@ips.ru" class="contacts__link-mail">aaa@ips.ru</a></div>
+            <div class="contacts__item"><span class="contacts__subtitle">Факс</span>
+              <p>+7 (000) 123-45-67</p>
+            </div>
+            <div class="contacts__item"><span class="contacts__subtitle">Юридический адрес</span>
+              <p>123456, г. Москва, ул. Пушкина, д. 5</p>
+            </div>
+          </div>
+          <div class="contacts__schema">
+            <h2>Схема проезда</h2>
+            <div id="map" class="contacts__map"></div>
+            <div class="wis-conten contacts__text">
+              <p>Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности требуют от нас анализа модели развития. Товарищи! постоянное информационно-пропагандистское обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации существенных финансовых и административных условий.</p>
+            </div>
+          </div>
+          <div class="contacts__form">
+            <h2>Обратная связь</h2>
+            <p class="contacts__form-warn">* - обозначены обязательные поля для отправки сообщения </p>
+            <form action="" class="js-validate contacts__cont">
+              <div class="contacts__form-row">
+                <div class="contacts__form-col">
+                  <input type="text" placeholder="Ваше имя*" data-req="req" class="input"/>
+                  <input type="text" placeholder="Электронная почта*" data-req="req" data-type="email" class="input"/>
+                  <select data-req="req" data-type="select" data-placeholder="Тема сообщения*" class="select js-style">
+                    <option value="0"></option>
+                    <option value="2">Изыскание источников водоснабжения</option>
+                    <option value="3">Разработка проектов логистического обеспечения строительства</option>
+                    <option value="4">Разработка и утверждение проектов освоения лесов</option>
+                    <option value="4">Разработка и утверждение проектов освоения лесов</option>
+                  </select>
+                </div>
+                <div class="contacts__form-col">
+                  <textarea placeholder="Текст сообщения" class="textarea contacts__textarea"></textarea>
+                </div>
+              </div>
+              <div class="contacts__form-row">
+                <div class="pseudocheckbox">
+                  <input type="checkbox" id="PERSONAL" data-req="req" data-type="checkbox" class="pseudocheckbox__checkbox"/>
+                  <label for="PERSONAL" class="pseudocheckbox__label">Даю согласие на обработку&nbsp;<a href="#">персональных данных</a></label>
+                </div>
+                <button type="submit" class="btn btn--yellow contact-us__btn">Отправить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer" class="footer">
+      <div class="wrapper">
+        <div class="footer__top">
+          <div class="logo footer__logo"><a href="#" class="logo__href"><img src="./img/logo.png" alt="" class="logo__img"/></a></div>
+          <div class="footer__column">
+            <nav class="footer__nav">
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item"><a href="#" class="footer__nav-link">О компании</a></li>
+                <li class="footer__nav-item"><a href="#" class="footer__nav-link">Услуги</a></li>
+                <li class="footer__nav-item"><a href="#" class="footer__nav-link">Проекты</a></li>
+                <li class="footer__nav-item"><a href="#" class="footer__nav-link">Партнеры</a></li>
+                <li class="footer__nav-item"><a href="#" class="footer__nav-link">Контакты</a></li>
+                <li class="footer__nav-item footer__nav-item--search">
+                  <button type="button" class="search-btn js-open-search"></button>
+                </li>
+              </ul>
+            </nav>
+            <form action="" class="search js-search-form">
+              <input type="text" placeholder="Введите запрос" class="search__input"/>
+              <button type="submit" class="search__btn"></button>
+            </form>
+            <div class="footer__phones"><a href="tel:+74991898916" class="footer__phones-link">+7 (499) 189-89-16</a><a href="tel:+74991801172" class="footer__phones-link">+7 (499) 180-11-72</a></div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__copyrights">
+            <p>ООО «ППП Искусственные сооружения» © 2018</p>
+          </div>
+          <div class="developers"><a href="https://dextra.ru" target="_blank" class="developers__href"><span class="developers__dextra">DEXTRA</span>Разработка<br/>сайта</a></div>
+        </div>
+      </div>
+    </footer>
+    <script src="./static/js/vendor.min.js"></script>
+    <script src="./static/js/script.js"></script>
+    <div class="hidden-blocks">
+      <div id="thanks" class="thanks"><span class="thanks__title">Спасибо за обращение</span>
+        <div class="thanks__text">
+          <p>Наши сотрудники в ближайшее время займутся<br/>вашим обращением и в скором времени ответят на него.</p>
+        </div>
+        <div class="thanks__phones">
+          <p>Также вы можете обратиться телефонам:</p>
+          <div class="thanks__phones-line"><a href="tel:+74991898916">+7 (499) 189-89-16</a><a href="tel:+74991898916">+7 (499) 189-89-16</a></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

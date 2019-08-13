@@ -79,19 +79,19 @@
 	}
 
 	&__link {
-		text-decoration: none;
-		text-transform: uppercase;
-		color: $green;
-		border-bottom: 1px solid $green;
-		transition: all 0.5s ease-out;
-		font-size: 18px;
-		line-height: 23px;
-		font-weight: normal;
+		span {
+			text-decoration: none;
+			text-transform: uppercase;
+			color: $green;
+			border-bottom: 1px solid $green;
+			transition: all 0.5s ease-out;
+			font-size: 18px;
+			line-height: 23px;
+			font-weight: normal;
 
-		display: inline-block;
-
-		&:hover {
-			border-color: transparent;
+			&:hover {
+				border-color: transparent;
+			}
 		}
 	}
 }
@@ -107,12 +107,7 @@
 @media only screen and (max-width: 767px) {
 	.search-page {
 		&__form {
-			flex-direction: column;
-
-			.input {
-				margin-bottom: 20px;
-				width: auto;
-			}
+			width: 100%;
 		}
 	}
 }
